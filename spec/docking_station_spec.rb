@@ -1,7 +1,5 @@
 require "./lib/docking_station"
 
-# In this challenge, you will raise an exception when a user attempts to dock a bike at a DockingStation that already contains a bike (i.e. with a capacity of 1). Scaffolding has been removed, but the steps are similar to Challenge 12
-
 describe DockingStation do
   describe '#release_bike' do
     it 'releases a bike' do
