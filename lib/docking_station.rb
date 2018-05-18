@@ -2,11 +2,14 @@ require_relative 'bike'
 
 class DockingStation
 
-#  attr_reader :bike
-  def initialize
+  attr_reader :bikes, :capacity
+  DEFAULT_CAPACITY = 10
+
+  def initialize(capacity=DEFAULT_CAPACITY)
     @bikes = []
+    @capacity = capacity
     # feature tests only work if we dock a bike first then release a bike because the default state of the @bikes array is still empty.
-    # need a way to set the array at 20, as per the user story. 
+    # need a way to set the array at 20, as per the user story.
   end
 
   def release_bike
@@ -20,10 +23,10 @@ class DockingStation
     @bikes << bike
   end
 
-  private
+ private
 
   def full?
-     @bikes.count >= 20
+     @bikes.count >= DEFAULT_CAPACITY
   end
 
   def empty?
