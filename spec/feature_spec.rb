@@ -1,12 +1,24 @@
 require './lib/docking_station.rb'
 require './lib/bike.rb'
 
-# As a system maintainer,
-# So that busy areas can be served more effectively,
-# I want to be able to specify a larger capacity when necessary.
+# As a maintainer of the system,
+# So that I can manage broken bikes and not disappoint users,
+# I'd like docking stations not to release broken bikes.
+
+# docking_station = DockingStation.new
+# bike = Bike.new
+# bike.report_broken
+# docking_station.dock(bike)
+# p docking_station.release_bike
+# EXPECT AN ERROR as no break method
 
 # docking_station = DockingStation.new(50)
-# bike = Bike.new
-# 50.times { docking_station.dock(bike) }
-# p docking_station.dock(bike)
-# # EXPECT AN ERROR
+# docking_station.dock(broken_bike)
+#
+# docking_station.release_bike
+
+
+
+# As a maintainer of the system,
+# So that I can manage broken bikes and not disappoint users,
+# I'd like docking stations to accept returning bikes (broken or not).
